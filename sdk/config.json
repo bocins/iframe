@@ -1,0 +1,18 @@
+{
+  "metric": {
+    "enabled": true,
+    "url": "https://psiclickstream.testonline.sberbank.ru:8097/metrics/inner-partners/sber-id",
+    "apiKey": "744fc6240a0bb6cb0da2b65d89cba7019f639452ad6a694f0f02c8a71648677b"
+    },
+  "blackList": {
+    "clientIds": []
+  },
+  "certificates": {
+    "checkUrl": "https://oauth.sber.ru/",
+    "enabled": false
+  },
+  "functionality":{
+    "buttonLoadTimeout": 7000,
+    "notificationLoadTimeout": 7000
+  }
+}
