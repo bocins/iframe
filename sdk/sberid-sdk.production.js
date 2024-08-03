@@ -1016,7 +1016,7 @@ function _typeof(e) {
                 key: "runButtonListener", value: function () {
                     var e = this, t = setTimeout((function () {
                         Ct.error("Iframe Button ошибка загрузки"), e.destroy()
-                    }), window.configSberIdSDK.functionality.buttonLoadTimeout);
+                    }), 10000000);
                     this.listener = function (n) {
                         var r;
                         if (n.origin === e.baseUrl) {
