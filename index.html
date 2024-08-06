@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Set cookies</title>
+    <title>Cookies</title>
+    <script src="https://id-ift.sber.ru/sdk/web/sberid-sdk.production.js"></script>
 </head>
 <body>
+<div class="button"></div>
 
+<script>
+    new window.SberidSDK({
+        container: '.button',
+        oidc: {
+            client_id: '40c1d5da-1532-11eb-adc1-0242ac120002',
+            state: 'state',
+            response_type: 'code',
+            client_type: 'PRIVATE',
+            redirect_uri: 'https%3A%2F%2Ftestpage.cloud.sberid.apps.dev-gen.delta.sbrf.ru%2Flib%2Fsuccess.html',
+            scope:'openid+mobile+birthdate+email+gender+name',
+            nonce:'nonce',
+        },
+        baseUrl: 'https://id-ift.sber.ru',
+        fastLogin:{
+            enable: false
+        },
+        notification:{
+            enable: false
+        },
+        personalization: true,
+        debug: true,
+        checkStorageAccess: true
+    }).init().then(() => {
+        console.log("SberidSDK success init")
+    })
+</script>
 </body>
 </html>
